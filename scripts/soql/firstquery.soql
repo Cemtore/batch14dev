@@ -1,0 +1,15 @@
+select id, name, phone FROM Account
+
+SELECT Id, Name,status__c from Salesforce_project__c where status__c != 'new' 
+
+SELECT Id, Name, project_name__c, status__c from salesforce_project__c where status__c != 'new'
+
+SELECT Id, Name, Industry, Phone, AccountNumber FROM Account where (phone != '' or website != ''and AccountNumber != null)
+
+SELECT Id, Name, Industry, Phone, AnnualRevenue, AccountNumber FROM Account where AnnualRevenue > 100000
+
+SELECT Id, Name, Industry, Phone, AnnualRevenue, AccountNumber FROM Account where createdDate > last_week
+
+SELECT Id, Name, Industry, Phone, AnnualRevenue, AccountNumber FROM Account where createdDate > last_N_days:365
+
+SELECT Id, Name, MailingCity FROM Contact WHERE MailingCity in ('Paris', 'Lawrence', 'Burlington')
